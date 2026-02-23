@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="service-detail">
+    <h2>{{ name }} in {{ city }}</h2>
+    <p>{{ description }}</p>
+    <p>As part of our {{ niche }} services in {{ city }}, our {{ name }} offering ensures your property is restored efficiently. Contact our team any time for a fast response.</p>
+    <a class="btn btn-primary" href="#contact-form">Get Help Now</a>
+  </article>
+  <section class="contact" id="contact-form">
+    <h3>Contact Us for {{ name }}</h3>
+    <form action="/api/lead" method="post">
+      <input type="hidden" name="site_slug" value="{{ site_slug }}" />
+      <input type="hidden" name="service" value="{{ name }}" />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="message">Additional Details:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+{% endblock %}

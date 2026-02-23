@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 1,
+    "niche": "Water Damage Restoration",
+    "city": "Dallas",
+    "cpc": 250.79,
+    "difficulty": 18,
+    "rationale": "Highest CPC in home services; low keyword difficulty"
+  },
+  {
+    "rank": 2,
+    "niche": "Flood Restoration",
+    "city": "Chicago",
+    "cpc": 151.79,
+    "difficulty": 22,
+    "rationale": "High emergency intent and strong demand"
+  },
+  {
+    "rank": 3,
+    "niche": "Emergency Plumbing",
+    "city": "Houston",
+    "cpc": 82.82,
+    "difficulty": 25,
+    "rationale": "Urgent need; high CPC and transactional intent"
+  },
+  {
+    "rank": 4,
+    "niche": "HVAC Repair Services",
+    "city": "Phoenix",
+    "cpc": 70.84,
+    "difficulty": 31,
+    "rationale": "Seasonal demand; CPC around $70; moderate competition"
+  },
+  {
+    "rank": 5,
+    "niche": "Roof Leak Repair",
+    "city": "Las Vegas",
+    "cpc": 14.0,
+    "difficulty": 30,
+    "rationale": "Emergency roof repair keywords cost $12\u201318"
+  },
+  {
+    "rank": 6,
+    "niche": "Garage Door Repair",
+    "city": "Los Angeles",
+    "cpc": 57.81,
+    "difficulty": 28,
+    "rationale": "High conversion rate and mid\u2011level SEO difficulty"
+  },
+  {
+    "rank": 7,
+    "niche": "Pest Control",
+    "city": "Miami",
+    "cpc": 34.0,
+    "difficulty": 20,
+    "rationale": "Average CPC $34 in competitive markets"
+  },
+  {
+    "rank": 8,
+    "niche": "Window Replacement",
+    "city": "Orlando",
+    "cpc": 40.53,
+    "difficulty": 27,
+    "rationale": "High\u2011value home renovation term with good intent"
+  },
+  {
+    "rank": 9,
+    "niche": "Home Security Installation",
+    "city": "San Francisco",
+    "cpc": 45.54,
+    "difficulty": 32,
+    "rationale": "Growing demand for smart home systems"
+  },
+  {
+    "rank": 10,
+    "niche": "Duct Cleaning Services",
+    "city": "Charlotte",
+    "cpc": 34.04,
+    "difficulty": 24,
+    "rationale": "Seasonal service with CPC around $34"
+  }
+]

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      {% for faq in faqs %}
+      <li>
+        <h4>{{ faq.question }}</h4>
+        <p>{{ faq.answer }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="contact" id="contact-form">
+    <h3>Still have questions?</h3>
+    <form action="/api/lead" method="post">
+      <input type="hidden" name="site_slug" value="{{ site_slug }}" />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="service">Service Needed:</label>
+      <select id="service" name="service">
+        {% for service in sub_services %}
+        <option value="{{ service.name }}">{{ service.name }}</option>
+        {% endfor %}
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="message">Additional Details:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <!-- FAQ schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for faq in faqs %}
+      {
+        "@type": "Question",
+        "name": "{{ faq.question }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq.answer }}"
+        }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endblock %}

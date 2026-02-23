@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ niche }} in {{ city }} – Local Service</title>
+  <!-- Link to site-specific static CSS. The generator copies the static directory into each site folder -->
+  <link rel="stylesheet" href="static/style.css" />
+  <script type="application/ld+json">{{ schema_business | safe }}</script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>{{ niche }} in {{ city }}</h1>
+      <p class="phone">Call now: <a href="tel:{{ phone }}">{{ phone }}</a></p>
+    </div>
+  </header>
+  <nav class="nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        {% for service in sub_services %}
+        <li><a href="{{ service.slug }}.html">{{ service.name }}</a></li>
+        {% endfor %}
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="main container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{ year }} {{ niche }} {{ city }}. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
