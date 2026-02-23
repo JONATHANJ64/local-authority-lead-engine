@@ -60,6 +60,9 @@ def create_lead(
     does not exist in the database, it will be created automatically
     with no assigned partner.
     """
+    if not name.strip() or not phone.strip():
+        raise HTTPException(status_code=400, detail="Name and phone are required.")
+
     db: Session = next(get_db())
     # Find or create site entry
     site = db.query(Site).filter_by(slug=site_slug).first()
